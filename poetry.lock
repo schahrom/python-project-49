@@ -1,4 +1,12 @@
 [[package]]
+name = "asciinema"
+version = "2.2.0"
+description = "Terminal session recorder"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "flake8"
 version = "5.0.4"
 description = "the modular source code checker: pep8 pyflakes and co"
@@ -46,9 +54,13 @@ python-versions = ">=3.6"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "e25f907f2a64a970a749dd871dce47fef15c27b4fa141f29c55287a504445cac"
+content-hash = "b94d8bbcb45a9b5828f95abba7fbbd6f92ac9e302590af682fbf0de5065bf12f"
 
 [metadata.files]
+asciinema = [
+    {file = "asciinema-2.2.0-py3-none-any.whl", hash = "sha256:6d601b48d76976869b5d1ffab98dff40cf3b2facea2b64a6f69db80df4fb0f69"},
+    {file = "asciinema-2.2.0.tar.gz", hash = "sha256:5ec5c4e5d3174bb7c559e45db4680eb8fa6c40c058fa5e5005ee96a1d99737b4"},
+]
 flake8 = [
     {file = "flake8-5.0.4-py2.py3-none-any.whl", hash = "sha256:7a1cf6b73744f5806ab95e526f6f0d8c01c66d7bbe349562d22dfca20610b248"},
     {file = "flake8-5.0.4.tar.gz", hash = "sha256:6fbe320aad8d6b95cec8b8e47bc933004678dc63095be98528b7bdd2a9f510db"},

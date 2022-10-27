@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import prompt
-from cli import welcome_user
+from .cli import welcome_user
 
 
 def main():
