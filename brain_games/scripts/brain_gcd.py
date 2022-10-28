@@ -9,10 +9,9 @@ def main():
 
 order_list = 0
 flag = True
-letters_container = '-+*'
 rand_list = list(zip(
-    [random.randrange(1, 50, 1) for i in range(3)],
-    [random.randrange(1, 50, 1) for i in range(3)]
+    [random.randrange(1, 20, 1) for i in range(3)],
+    [random.randrange(1, 20, 1) for i in range(3)]
 ))
 
 
@@ -20,18 +19,25 @@ name = prompt.string('''Welcome to the Brain Games!
 May I have your name?   ''')    # Приглашение к вводу имени
 print('What is the result of the expression?')
 
+def gcd(first_number, second_number):
+    if first_number == 0 or second_number == 0:
+        return first_number + second_number
+    elif first_number > second_number:
+        return gcd(first_number - second_number, second_number)
+    else:
+        return gcd(first_number, second_number - first_number)
+
 
 def question(first_number, second_number):
     global flag
-    question_template = str(first_number) + ' ' + random.choice(letters_container) + ' ' + str(second_number)
-    print('Question:  ' + question_template)
+    print('Question:  ' + str(first_number) + ' ' + str(second_number))
     answer = input('Your answer: ')
-    if answer == str(eval(question_template)):
+    if answer == str(gcd(first_number, second_number)):
         print('Correct!')
         flag = True
         return flag
-    elif answer != str(eval(question_template)):
-        print(f'{answer} is wrong answer ;(. Correct answer was {eval(question_template)}.')
+    elif answer != str(gcd(first_number, second_number)):
+        print(f'{answer} is wrong answer ;(. Correct answer was {gcd(first_number, second_number)}.')
         flag = False
         return flag
     else:
