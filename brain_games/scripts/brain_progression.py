@@ -14,13 +14,12 @@ May I have your name?   ''')    # Приглашение к вводу имен�
 print('What is the result of the expression?')
 
 
-
-
-
 def question(search_value):
     list_num = [i for i in range(1, random.randint(15, 30), random.randint(1, 4))]
     index_search_value = [random.randrange(1, len(list_num), 1) for i in range(3)]
-    template_quest = list_num[:]; template_quest.pop(index_search_value[search_value]); template_quest.insert(index_search_value[search_value], '..')
+    template_quest = list_num[:]
+    template_quest.pop(index_search_value[search_value])
+    template_quest.insert(index_search_value[search_value], '..')
     global flag
     print('Question:  ' + ", ".join(str(j) for j in template_quest))
     answer = input('Your answer: ')
